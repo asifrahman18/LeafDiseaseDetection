@@ -1,5 +1,1 @@
 https://www.kaggle.com/datasets/amandam1/healthy-vs-diseased-leaf-image-dataset
-
-* Our Dataset is around 3.5GB in size, so we could not upload the whole dataset in this RAR file.
-* We have removed some classes and rearranged the dataset that can be found from the above link.
-* Our complete dataset that we used for our project can be found in our GitHub repository.
