@@ -1,4 +1,4 @@
-**Motivation**
+<h1>Motivation</h1>
 
 The motivation of this project is totally based on the target user of
 gardening and the severity of the leaf disease. It is quite clear that
