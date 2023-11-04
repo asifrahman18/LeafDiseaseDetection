@@ -18,7 +18,7 @@ project is to help these urban people get acquainted with a
 technological tool that will help them to detect the plant diseases in
 real time.
 
-**3.1 Workflow**
+<h4>3.1 Workflow</h4>
 
 In our project, our model is a CNN model. A workflow diagram displaying
 the complete process of the method is shown below:
@@ -26,10 +26,10 @@ the complete process of the method is shown below:
 <!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image1.png){width="3.563888888888889in"
 height="4.093055555555556in"}
--->
+
 
 *Figure 1: Block diagram of workflow*
-
+-->
 In the diagram, we can see that our first step is collecting a suitable
 dataset which we can use for training and testing our model. The images
 from the dataset have to be pre-processed before we can use it for
@@ -37,7 +37,7 @@ training and testing. After training the model, we can test the model by
 making predictions on some images and validating the prediction with the
 actual image and also find the accuracy.
 
-**3.2 Data Collection**
+<h4>3.2 Data Collection</h4>
 
 Collecting dataset is our first step and also one of the most important
 step. Before collecting a dataset, there are some features that has to
@@ -45,13 +45,13 @@ be explored. Since our project requires an image dataset, we have to
 look at features like the number of image samples, variations of image,
 background, image format and resolution.
 
-We have collected our dataset from **\[8\]** which contains .jpg type of
+We have collected our dataset from <a href="">here</a> which contains .jpg type of
 image. There are ten classes of five different types of plants
 containing 2273 pictures of both healthy and diseased leaves. All the
 images in the dataset has similar background. The resolution of all
 images are also same.
 
-**3.3 Pre-processing**
+<h5>3.3 Pre-processing</h5>
 
 Before using our images for training, the images have to be
 pre-processed. Pre-processing is required to increase the quality of
@@ -68,13 +68,13 @@ From the above diagram, we can see that after obtaining the image from
 the dataset, we will be resizing the images. Then we will normalize the
 images and finally apply image augmentation.
 
-**3.3.1 Resizing**
+<h5>3.3.1 Resizing</h5>
 
 We started our pre-processing with image rescaling and resizing. Our
 images from the dataset were 6000x6000 resolution. We resized the image
 into 256x256 size to ensure that all images stay at a consistent scale.
 
-**3.3.2 Normalization**
+<h5>3.3.2 Normalization</h5>
 
 After resizing the images, we normalized the images. Normalization keeps
 all the input pixels on similar distribution. In our model, we performed
@@ -84,7 +84,7 @@ values, we rescale the values between 0 and 1.
 For our model, we performed normalization implicitly in the resizing and
 rescaling step.
 
-**3.3.3 Image Augmentation**
+<h5>3.3.3 Image Augmentation</h5>
 
 Our final step of pre-processing stage is image augmentation. Data
 augmentation is applied to the existing dataset to artificially increase
@@ -95,13 +95,13 @@ create variation and lowers the chances of overfitting.
 In our model, we have randomly flipped the images horizontally and
 vertically. We have also rotated the images randomly up to 0.2 radians.
 
-**3.4 Building The Model**
+<h5>3.4 Building The Model</h5>
 
 Our Machine Learning model is a CNN model. Our model can be divided into
 two parts, Feature extraction and image classification. We have used CNN
 for both feature extraction and image classification.
 
-**3.4.1 Feature Extraction**
+<h5>3.4.1 Feature Extraction</h5>
 
 Feature extraction transforms raw data into numeric values compatible
 with machine learning\
@@ -147,7 +147,7 @@ ReLU deactivates the neuron by converting it to zero\[\]. As a result,
 exponential growth in computation can be prevented. Our two pooling
 layers capture the most important features with a pool size of 2x2.
 
-**3.4.2 Image Classification**
+<h5>3.4.2 Image Classification</h5>
 
 In a CNN model, the classification layer determines the predicted value
 on the activation map **\[10\]**. Once the model has extracted features,
@@ -191,7 +191,7 @@ height="3.6375in"}
 *Figure 5: Model summary*
 
 -->
-**3.5 Training The Model**
+<h4>3.5 Training The Model</h4>
 
 After preprocessing and building the model, our model is ready for
 training. We have split our dataset into two partitions. The first
