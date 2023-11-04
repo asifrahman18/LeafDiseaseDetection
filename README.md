@@ -45,7 +45,7 @@ be explored. Since our project requires an image dataset, we have to
 look at features like the number of image samples, variations of image,
 background, image format and resolution.
 
-We have collected our dataset from <a href="">here</a> which contains .jpg type of
+We have collected our dataset from <a href="https://www.kaggle.com/datasets/amandam1/healthy-vs-diseased-leaf-image-dataset">here</a> which contains .jpg type of
 image. There are ten classes of five different types of plants
 containing 2273 pictures of both healthy and diseased leaves. All the
 images in the dataset has similar background. The resolution of all
@@ -105,7 +105,7 @@ for both feature extraction and image classification.
 
 Feature extraction transforms raw data into numeric values compatible
 with machine learning\
-algorithms **\[9\]**. These numeric values can be processed by keeping
+algorithms. These numeric values can be processed by keeping
 the integrity of the information that is found from the original
 dataset. For our project, we used CNN for feature extraction. There are
 two main layers of feature extraction in a CNN model. If we take a look
@@ -150,7 +150,7 @@ layers capture the most important features with a pool size of 2x2.
 <h2>3.4.2 Image Classification</h2>
 
 In a CNN model, the classification layer determines the predicted value
-on the activation map **\[10\]**. Once the model has extracted features,
+on the activation map. Once the model has extracted features,
 it needs to classify those features into learn the features of the data.
 
 CNN classification also has two layers. If we look at the classification
@@ -293,58 +293,103 @@ Confusion Matrix, and got the following scores,
 <table>
 <tr>
 <td>Class Name</td>
-<td>Guava Name</td>
-<td>Guava Name</td>
-<td>Jamun Name</td>
-<td>Jamun Name</td>
-<td>Lemon Name</td>
-<td>Lemon Name</td>
-<td>Mango Name</td>
-<td>Mango Name</td>
-<td>Pomegranate Name</td>
-<td>Pomegranate Name</td>
+<td>Accuracy</td>
+<td>Specificity</td>
+<td>Sensitivity</td>
+<td>Precision</td>
+<td>F1 Score</td>
 
+</tr>
+<tr>
+<td>Guava Diseased</td>
+<td>0.973</td>
+<td>0.981</td>
+<td>0.846</td>
+<td>0.733</td>
+<td>0.785</td>
+</tr>
+<tr>
+<td>Guava Healthy</td>
+<td>0.822</td>
+<td>1.00</td>
+<td>0.870</td>
+<td>1.00</td>
+<td>0.931</td>
+</tr>
+
+<tr>
+<td>Jamun Diseased</td>
+<td>0.822</td>
+<td>0.983</td>
+<td>0.973</td>
+<td>0.925</td>
+<td>0.948</td>
+</tr>
+
+<tr>
+<td>Jamun Healthy</td>
+<td>0.733</td>
+<td>0.990</td>
+<td>0.809</td>
+<td>0.894</td>
+<td>0.850</td>
+</tr>
+
+<tr>
+<td>Lemon Diseased</td>
+<td>0.995</td>
+<td>0.995</td>
+<td>1.00</td>
+<td>0.800</td>
+<td>0.888</td>
+</tr>
+
+<tr>
+<td>Lemon Healthy</td>
+<td>0.991</td>
+<td>1.00</td>
+<td>0.909</td>
+<td>1.00</td>
+<td>0.952</td>
+</tr>
+
+<tr>
+<td>Mango Diseased</td>
+<td>0.991</td>
+<td>0.989</td>
+<td>1.00</td>
+<td>0.941</td>
+<td>0.969</td>
+</tr>
+
+<tr>
+<td>Mango Healthy</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>Pomegranate Diseased</td>
+<td>0.982</td>
+<td>0.980</td>
+<td>1.00</td>
+<td>0.851</td>
+<td>0.920</td>
+</tr>
+
+<tr>
+<td>Pomegranate Healthy</td>
+<td>0.982</td>
+<td>1.00</td>
+<td>0.862</td>
+<td>1.00</td>
+<td>0.925</td>
 </tr>
 
 </table>
 
-
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > **Class | > **A     | > **Spec  | > **Sens  | > **Pr    | > **F1    |
-| > Name**  | ccuracy** | ificity** | itivity** | ecision** | > Score** |
-+===========+===========+===========+===========+===========+===========+
-| > guava   | > 0.973   | > 0.981   | > 0.846   | > 0.733   | > 0.785   |
-| _diseased |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > guav    | > 0.822   | > 1.00    | > 0.870   | > 1.00    | > 0.931   |
-| a_healthy |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > jamun   | > 0.822   | > 0.983   | > 0.973   | > 0.925   | > 0.948   |
-| _diseased |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > jamu    | > 0.733   | > 0.990   | > 0.809   | > 0.894   | > 0.850   |
-| n_healthy |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > lemon   | > 0.995   | > 0.995   | > 1.00    | > 0.800   | > 0.888   |
-| _diseased |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > lemo    | > 0.995   | > 1.00    | > 0.909   | > 1.00    | > 0.952   |
-| n_healthy |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > mango   | > 0.991   | > 0.989   | > 1.00    | > 0.941   | > 0.969   |
-| _diseased |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| > mang    | > 1.00    | > 1.00    | > 1.00    | > 1.00    | > 1.00    |
-| o_healthy |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| po        | > 0.982   | > 0.980   | > 1.00    | > 0.851   | > 0.920   |
-| megranate |           |           |           |           |           |
-| _diseased |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| p         | > 0.982   | > 1.00    | > 0.862   | > 1.00    | > 0.925   |
-| omegranat |           |           |           |           |           |
-| e_healthy |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
 
 *Table 1: Model evaluation matrices*
 
@@ -382,35 +427,3 @@ each epoch. The training and validation curves are also on similar
 position.
 
 -->
-
-\[1\] "City heat can be reduced by Rooftop Gardens", Prothomalo.
-\[Accessed: April 8, 2023\]\
-Available at:\
-\[2\] "Leaf spot" (2022) Wikipedia. Wikimedia Foundation \[Accessed:
-April 8, 2023\] Available at:\
-\[3\] Horst, R. (2008). Westcott's Plant Disease Handbook (Seventh
-Edition.). Springer Netherlands. \[4\] Ethem Alpaydin (2020).
-Introduction to Machine Learning (Fourth Ed.). MIT. pp. xix, 1--3,
-13--18. ISBN 978-0262043793.
-
-\[5\] Leaf Disease Detection Using Convolutional Neural Network, Sneha
-Patel\
-\
-\[Published: July 2022\]\
-\[6\] Singh, V., & Misra, A. (2017). Detection of plant leaf diseases
-using image segmentation and soft computing techniques. *Information
-Processing in Agriculture*, *4*(1), 41-49.
-
-\[7\] Kulkarni, Pranesh & Karwande, Atharva & Kolhe, Tejas & Kamble,
-Soham & Joshi, Akshay & Wyawahare, Medha. (2021). Plant Disease
-Detection Using Image Processing and Machine Learning.\
-\[8\] Healthy vs. Diseased Leaf Image Dataset\
-\
-\[9\] The Role of Feature Extraction in Machine Learning \| Snowflake.
-Snowflake.
-
-\[10\] *What Is a Convolutional Neural Network? A Beginner\'s Tutorial
-for Machine Learning and Deep Learning*. FreeCodeCamp.
-
-\[11\] Wikipedia contributors. (2023, April 4). F-score. In *Wikipedia,
-The Free Encyclopedia*. Retrieved 00:45, June 16, 2023, from
