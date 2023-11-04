@@ -18,7 +18,7 @@ project is to help these urban people get acquainted with a
 technological tool that will help them to detect the plant diseases in
 real time.
 
-<h4>3.1 Workflow</h4>
+<h1>3.1 Workflow</h1>
 
 In our project, our model is a CNN model. A workflow diagram displaying
 the complete process of the method is shown below:
@@ -37,7 +37,7 @@ training and testing. After training the model, we can test the model by
 making predictions on some images and validating the prediction with the
 actual image and also find the accuracy.
 
-<h4>3.2 Data Collection</h4>
+<h1>3.2 Data Collection</h1>
 
 Collecting dataset is our first step and also one of the most important
 step. Before collecting a dataset, there are some features that has to
@@ -51,7 +51,7 @@ containing 2273 pictures of both healthy and diseased leaves. All the
 images in the dataset has similar background. The resolution of all
 images are also same.
 
-<h5>3.3 Pre-processing</h5>
+<h2>3.3 Pre-processing</h2>
 
 Before using our images for training, the images have to be
 pre-processed. Pre-processing is required to increase the quality of
@@ -68,13 +68,13 @@ From the above diagram, we can see that after obtaining the image from
 the dataset, we will be resizing the images. Then we will normalize the
 images and finally apply image augmentation.
 
-<h5>3.3.1 Resizing</h5>
+<h2>3.3.1 Resizing</h2>
 
 We started our pre-processing with image rescaling and resizing. Our
 images from the dataset were 6000x6000 resolution. We resized the image
 into 256x256 size to ensure that all images stay at a consistent scale.
 
-<h5>3.3.2 Normalization</h5>
+<h2>3.3.2 Normalization</h2>
 
 After resizing the images, we normalized the images. Normalization keeps
 all the input pixels on similar distribution. In our model, we performed
@@ -84,7 +84,7 @@ values, we rescale the values between 0 and 1.
 For our model, we performed normalization implicitly in the resizing and
 rescaling step.
 
-<h5>3.3.3 Image Augmentation</h5>
+<h2>3.3.3 Image Augmentation</h2>
 
 Our final step of pre-processing stage is image augmentation. Data
 augmentation is applied to the existing dataset to artificially increase
@@ -95,13 +95,13 @@ create variation and lowers the chances of overfitting.
 In our model, we have randomly flipped the images horizontally and
 vertically. We have also rotated the images randomly up to 0.2 radians.
 
-<h5>3.4 Building The Model</h5>
+<h2>3.4 Building The Model</h2>
 
 Our Machine Learning model is a CNN model. Our model can be divided into
 two parts, Feature extraction and image classification. We have used CNN
 for both feature extraction and image classification.
 
-<h5>3.4.1 Feature Extraction</h5>
+<h2>3.4.1 Feature Extraction</h2>
 
 Feature extraction transforms raw data into numeric values compatible
 with machine learning\
@@ -147,7 +147,7 @@ ReLU deactivates the neuron by converting it to zero\[\]. As a result,
 exponential growth in computation can be prevented. Our two pooling
 layers capture the most important features with a pool size of 2x2.
 
-<h5>3.4.2 Image Classification</h5>
+<h2>3.4.2 Image Classification</h2>
 
 In a CNN model, the classification layer determines the predicted value
 on the activation map **\[10\]**. Once the model has extracted features,
@@ -191,7 +191,7 @@ height="3.6375in"}
 *Figure 5: Model summary*
 
 -->
-<h4>3.5 Training The Model</h4>
+<h2>3.5 Training The Model</h2>
 
 After preprocessing and building the model, our model is ready for
 training. We have split our dataset into two partitions. The first
@@ -217,7 +217,7 @@ tried different batch sizes, epoch values, and learning rate of the
 optimizer and found the best accuracy with a batch size of 32, epoch 30
 and learning rate of 0.001.
 
-**3.6 Testing The Model and Making Predictions**
+<h1>3.6 Testing The Model and Making Predictions</h1>
 
 After completing the training part, we tested our model and made
 predictions. At first, we evaluated the model on the test dataset and
@@ -228,7 +228,7 @@ we selected 9 images from the test dataset and made predictions. This
 time, all the predictions were mostly correct. We also displayed the
 confidence level by taking the maximum predict probability.
 
-**Results**
+<h1>Results</h1>
 
 Confusion matrix is one of the most common performance measurement used
 in machine learning. It shows the summary of a model's performance on a
@@ -288,6 +288,26 @@ mean of the precision and recall
 
 We have calculated all these values for each class of our model from the
 Confusion Matrix, and got the following scores,
+
+
+<table>
+<tr>
+<td>Class Name</td>
+<td>Guava Name</td>
+<td>Guava Name</td>
+<td>Jamun Name</td>
+<td>Jamun Name</td>
+<td>Lemon Name</td>
+<td>Lemon Name</td>
+<td>Mango Name</td>
+<td>Mango Name</td>
+<td>Pomegranate Name</td>
+<td>Pomegranate Name</td>
+
+</tr>
+
+</table>
+
 
 +-----------+-----------+-----------+-----------+-----------+-----------+
 | > **Class | > **A     | > **Spec  | > **Sens  | > **Pr    | > **F1    |
