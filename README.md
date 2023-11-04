@@ -1,4 +1,4 @@
-**[Motivation]{.underline}**
+**Motivation**
 
 The motivation of this project is totally based on the target user of
 gardening and the severity of the leaf disease. It is quite clear that
@@ -23,8 +23,10 @@ real time.
 In our project, our model is a CNN model. A workflow diagram displaying
 the complete process of the method is shown below:
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image1.png){width="3.563888888888889in"
 height="4.093055555555556in"}
+-->
 
 *Figure 1: Block diagram of workflow*
 
@@ -56,11 +58,12 @@ pre-processed. Pre-processing is required to increase the quality of
 input image so that the performance of the model can be improved. We
 followed the following steps for pre-processing our images:
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image2.png){width="2.8652777777777776in"
 height="3.645832239720035in"}
 
 *Figure 2: Block diagram of image pre-processing*
-
+-->
 From the above diagram, we can see that after obtaining the image from
 the dataset, we will be resizing the images. Then we will normalize the
 images and finally apply image augmentation.
@@ -108,11 +111,13 @@ dataset. For our project, we used CNN for feature extraction. There are
 two main layers of feature extraction in a CNN model. If we take a look
 at the CNN architecture,
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image3.png){width="4.708333333333333in"
 height="2.2597222222222224in"}
 
 *Figure 3: CNN model architecture of feature extraction*
 
+-->
 Here we can see that there are two layers in feature extraction,
 Convolutional layer and Pooling layer.
 
@@ -151,11 +156,13 @@ it needs to classify those features into learn the features of the data.
 CNN classification also has two layers. If we look at the classification
 architecture,
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image4.png){width="4.688888888888889in"
 height="2.3430555555555554in"}
 
 *Figure 4: CNN model architecture of classification*
 
+-->
 We can see that there is a flatten layer and a dense layer.
 
 The flatten layer flattens the 2D layers from feature extraction into 1D
@@ -177,11 +184,13 @@ layer of the model. We have used softmax activation function here. Each
 output value of this layer represents the probability of input of a
 particular class.
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image5.png){width="3.7180555555555554in"
 height="3.6375in"}
 
 *Figure 5: Model summary*
 
+-->
 **3.5 Training The Model**
 
 After preprocessing and building the model, our model is ready for
@@ -227,10 +236,12 @@ test data. This matrix uses the true labels and the predicted labels to
 show four types of information. These are True Positive (TP), True
 Negative (TN), False Positive (FP) and False Negative (FN)
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image6.png){width="6.097222222222222in"
 height="5.583333333333333in"}
 
 *Figure 6: Confusion matrix*
+-->
 
 From the confusion matrix, we can also calculate some important data for
 each class which we can use to analyze the model. Which are Accuracy,
@@ -324,10 +335,12 @@ training accuracy is the accuracy of the model on the training dataset
 and the validation accuracy is the accuracy on the validation dataset
 which is different from the training dataset.
 
+<!---
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image7.png){width="6.5in"
 height="2.1944444444444446in"}
 
 *Figure 7: Training and validation accuracy graph*
+
 
 From the graph, we can see that the accuracy starts to increase as the
 model learns to adjust the parameters. We can also see that the training
@@ -338,6 +351,7 @@ Our other graph is Training and Validation loss graph. This graph shows
 the change loss of the model over each epoch. The goal here is to
 minimize the amount of loss over each epoch.
 
+
 ![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image8.png){width="6.5in"
 height="2.1763877952755903in"}
 
@@ -346,6 +360,8 @@ height="2.1763877952755903in"}
 In this graph, we can see that the loss amount starts to decrease with
 each epoch. The training and validation curves are also on similar
 position.
+
+-->
 
 \[1\] "City heat can be reduced by Rooftop Gardens", Prothomalo.
 \[Accessed: April 8, 2023\]\
