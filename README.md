@@ -156,13 +156,10 @@ it needs to classify those features into learn the features of the data.
 CNN classification also has two layers. If we look at the classification
 architecture,
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image4.png){width="4.688888888888889in"
-height="2.3430555555555554in"}
-
+<!--
+![CNN Model Architecture.](/Screenshots/Screenshot%20(162).png "Results Page")
 *Figure 4: CNN model architecture of classification*
-
--->
+!-->
 We can see that there is a flatten layer and a dense layer.
 
 The flatten layer flattens the 2D layers from feature extraction into 1D
@@ -236,12 +233,10 @@ test data. This matrix uses the true labels and the predicted labels to
 show four types of information. These are True Positive (TP), True
 Negative (TN), False Positive (FP) and False Negative (FN)
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image6.png){width="6.097222222222222in"
-height="5.583333333333333in"}
+
+![Confusion Matrix.](/Documents/Confusion%20Matrix/download.png "Confusion Matrix")
 
 *Figure 6: Confusion matrix*
--->
 
 From the confusion matrix, we can also calculate some important data for
 each class which we can use to analyze the model. Which are Accuracy,
@@ -400,10 +395,8 @@ training accuracy is the accuracy of the model on the training dataset
 and the validation accuracy is the accuracy on the validation dataset
 which is different from the training dataset.
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image7.png){width="6.5in"
-height="2.1944444444444446in"}
 
+![Training and validation accuracy graph](/Documents/graphs/Final%20Graph/download.png "Training and validation accuracy graph")
 *Figure 7: Training and validation accuracy graph*
 
 
@@ -417,8 +410,7 @@ the change loss of the model over each epoch. The goal here is to
 minimize the amount of loss over each epoch.
 
 
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image8.png){width="6.5in"
-height="2.1763877952755903in"}
+![Training and validation loss graph.](/Documents/graphs/Final%20Graph/download%20(1).png "Training and validation loss graph")
 
 *Figure 8: Training and validation loss graph*
 
@@ -426,4 +418,3 @@ In this graph, we can see that the loss amount starts to decrease with
 each epoch. The training and validation curves are also on similar
 position.
 
--->
