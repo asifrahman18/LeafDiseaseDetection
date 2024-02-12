@@ -154,6 +154,7 @@ architecture,
 
 
 ![CNN model architecture of classification](/Documents/Reports/classification.png "CNN model architecture of classification")
+
 *Figure 4: CNN model architecture of classification*
 
 We can see that there is a flatten layer and a dense layer.
