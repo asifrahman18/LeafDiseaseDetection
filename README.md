@@ -23,13 +23,11 @@ real time.
 In our project, our model is a CNN model. A workflow diagram displaying
 the complete process of the method is shown below:
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image1.png){width="3.563888888888889in"
-height="4.093055555555556in"}
 
+![Block Diagram of workflow](/Documents/Reports/blockDiagram.png "Block Diagram of workflow")
 
 *Figure 1: Block diagram of workflow*
--->
+
 In the diagram, we can see that our first step is collecting a suitable
 dataset which we can use for training and testing our model. The images
 from the dataset have to be pre-processed before we can use it for
@@ -58,12 +56,11 @@ pre-processed. Pre-processing is required to increase the quality of
 input image so that the performance of the model can be improved. We
 followed the following steps for pre-processing our images:
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image2.png){width="2.8652777777777776in"
-height="3.645832239720035in"}
+
+![Block Diagram of image pre-processing](/Documents/Reports/imagePreprocessing.png "Block Diagram of image pre-processing")
 
 *Figure 2: Block diagram of image pre-processing*
--->
+
 From the above diagram, we can see that after obtaining the image from
 the dataset, we will be resizing the images. Then we will normalize the
 images and finally apply image augmentation.
@@ -111,13 +108,12 @@ dataset. For our project, we used CNN for feature extraction. There are
 two main layers of feature extraction in a CNN model. If we take a look
 at the CNN architecture,
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image3.png){width="4.708333333333333in"
-height="2.2597222222222224in"}
+
+![CNN model architecture of feature extraction](/Documents/Reports/featureExtraction.png "CNN model architecture of feature extraction")
 
 *Figure 3: CNN model architecture of feature extraction*
 
--->
+
 Here we can see that there are two layers in feature extraction,
 Convolutional layer and Pooling layer.
 
@@ -156,10 +152,10 @@ it needs to classify those features into learn the features of the data.
 CNN classification also has two layers. If we look at the classification
 architecture,
 
-<!--
-![CNN Model Architecture.](/Screenshots/Screenshot%20(162).png "Results Page")
+
+![CNN model architecture of classification](/Documents/Reports/classification.png "CNN model architecture of classification")
 *Figure 4: CNN model architecture of classification*
-!-->
+
 We can see that there is a flatten layer and a dense layer.
 
 The flatten layer flattens the 2D layers from feature extraction into 1D
@@ -181,13 +177,12 @@ layer of the model. We have used softmax activation function here. Each
 output value of this layer represents the probability of input of a
 particular class.
 
-<!---
-![](vertopal_c705d2cb40af4be3a9ce76b28f9316fb/media/image5.png){width="3.7180555555555554in"
-height="3.6375in"}
+
+![Model summary](/Documents/Reports/summary.png "Model summary")
 
 *Figure 5: Model summary*
 
--->
+
 <h2>3.5 Training The Model</h2>
 
 After preprocessing and building the model, our model is ready for
