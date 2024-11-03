@@ -1,3 +1,8 @@
+This repository contains additional resources and supporting files for the machine learning project. 
+
+**Note:** The main code for this program is available in a separate repository. You can find it [here](https://github.com/a-184/LeafDiseaseDetection/tree/main/code).
+
+
 <h1>Motivation</h1>
 
 The motivation of this project is totally based on the target user of
